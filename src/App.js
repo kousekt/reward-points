@@ -58,10 +58,10 @@ function calculateResults(incomingData) {
       tot.push(cRow);
     });    
   }
-  console.log("byCustomer", byCustomer);
-  console.log("tot", tot);
+  //console.log("byCustomer", byCustomer);
+  //console.log("tot", tot);
   let totByCustomer = [];
-  for (var custKey in totalPointsByCustomer) {    
+  for (custKey in totalPointsByCustomer) {    
     totByCustomer.push({
       name: custKey,
       points: totalPointsByCustomer[custKey]
@@ -108,7 +108,7 @@ function App() {
 
   function getIndividualTransactions(row) {
     let byCustMonth = _.filter(transactionData.pointsPerTransaction, (tRow)=>{    
-      return row.original.custid == tRow.custid && row.original.monthNumber == tRow.month;
+      return row.original.custid === tRow.custid && row.original.monthNumber === tRow.month;
     });
     return byCustMonth;
   }
