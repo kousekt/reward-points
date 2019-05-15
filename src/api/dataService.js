@@ -19,6 +19,12 @@ export default function() {
         {
           custid: 1,
           name: "Acme",
+          amt: 94,
+          transactionDt: "05-21-2019"
+        },
+        {
+          custid: 1,
+          name: "Acme",
           amt: 10,
           transactionDt: "06-01-2019"
         },
@@ -33,6 +39,18 @@ export default function() {
           name: "Acme",
           amt: 200,
           transactionDt: "07-01-2019"
+        },
+        {
+          custid: 1,
+          name: "Acme",
+          amt: 1,
+          transactionDt: "07-04-2019"
+        },
+        {
+          custid: 1,
+          name: "Acme",
+          amt: 80,
+          transactionDt: "07-03-2019"
         },
         {
           custid: 1,

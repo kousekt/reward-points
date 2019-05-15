@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import fetch from './api/dataService';
 import ReactTable from 'react-table';
 import "./App.css";
+import _ from 'lodash';
 
 function calculateResults(incomingData) {
   // Calculate points per transaction
@@ -31,12 +32,14 @@ function calculateResults(incomingData) {
     }    
     if (byCustomer[custid][month]) {
       byCustomer[custid][month].points += points;
+      byCustomer[custid][month].numTransactions++;
     }
     else {
       byCustomer[custid][month] = {
         custid,
         name,
         month: months[month],
+        numTransactions: 1,
         points
       }
     }    
@@ -61,11 +64,15 @@ function App() {
   const columns = [
     {
       Header:'Customer',
-      accessor: 'name'
+      accessor: 'name'      
     },    
     {
       Header:'Month',
       accessor: 'month'
+    },
+    {
+      Header: "# of Transactions",
+      accessor: 'numTransactions'
     },
     {
       Header:'Reward Points',
