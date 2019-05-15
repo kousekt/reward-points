@@ -93,6 +93,12 @@ export default function() {
           name: "Century",
           amt: 224,
           transactionDt: "07-21-2019"
+        },
+        {
+          custid: 3,
+          name: "Sallys Startup",
+          amt: 120,
+          transactionDt: "06-21-2019"
         }
     ]
   );
