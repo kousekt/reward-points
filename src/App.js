@@ -115,8 +115,7 @@ function App() {
 
   useEffect(() => { 
     fetch().then((data)=> {             
-      const results = calculateResults(data);
-      console.log("results", results);
+      const results = calculateResults(data);      
       setTransactionData(results);
     });
   },[]);
